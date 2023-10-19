@@ -36,9 +36,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 1000), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Start())));
+    Timer(const Duration(milliseconds: 1500), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Start())));
     if (mounted) {
-      MAX_RADIUS = Get.context!.width / 1.7 ;
+      MAX_RADIUS = Get.context!.width / 1.9 ;
 
       log("max radius $MAX_RADIUS");
 
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           return;
         }
         setState(() {
-          radius = radius + 30;
+          radius = radius + 5;
         });
       });
     }
